@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Douglas &amp; Talita Haggist's X3 App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0a0e13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Haggist X3">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22Douglas%20%26%20Talita%20Haggist%27s%20X3%20App%22%2C%20%22short_name%22%3A%20%22Haggist%20X3%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%230a0e13%22%2C%20%22theme_color%22%3A%20%22%230a0e13%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22scope%22%3A%20%22.%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFJElEQVR4nO3cu3kb5xaG0QEeRwyYsAR34TpUputwFy6BCQOmdCBRBkEMMJf/sv/ZaxUgI/jePQNI55ymYJ6eXz56fwbqeX97PfX%2BDJe6fhhjZ5r6RtH8P2z03NM6hmb/McNnjVYhVP%2BPGD571A6h2h9u%2BJRUK4Tif6jhU1PpEM4l/zDjp7bSGytSk%2BHTQ4mnwe4ngPHTS4nt7QrA%2BOlt7wY3B2D8RLFni5sCMH6i2brJ1QEYP1Ft2eaqAIyf6NZudHEAxs8o1mx1UQDGz2iWbvZhAMbPqJZst%2Bg/hYDR3A3A9Wd0jzY8G4DxcxT3tuwViNRuBuD6czRzm/YEILVvAbj%2BHNWtbXsCkNqXAFz/2P785%2B/eH2F41xv3BBiE8dfxOwDXnywut%2B4JMADXvx4BBHc5/n//%2BtHxkxzTeZq8/pDP5%2BY9AQLz6lOfAEhNAEG5/m0IICDjb%2BfsCzBZPT2/fHgCBDN3/f0EWocAAvHq054ASE0AQbj%2BfQiA1AQQgOvfjwA6WzJ%2BvwDVIwBSE0BHXn36E0Anxh%2BDAEhNAB24/nEIoDHjj0UAwfkJtC4BNOT6xyMAUhNAI65/TAJowPjjEgCpCaAy1z82AVS0d/x%2BAq1PAKQmgEq8%2BoxBABUY/zgEQGoCKMz1H4sASE0ABZW8/n4CbUMAhXj1GZMASE0ABbj%2B4xLATsY/NgGQmgB2qHX9/QLUjgBITQAbefc/BgFsYPzHIQBSE8BKrv%2BxCGAF4z8eAQTjJ9C2BLCQ639MAljA%2BI/rj94fgK8ixZbhdcwT4IFIg2wpw/inSQAkJ4A7XP/jE8AM489BAKQmgBtc/zwEcMX4cxEAqQngguufjwB%2BMf6cBJBY9vFPkwCmacp7/RFAWq7/T%2BkDyHj9jf9/qQPIOH6%2BSh1ARq7/V2kDyHj9jf%2B7lAFkHD%2B3pQwgI9f/tnQBZLz%2Bxj8vXQBwKVUArj/X0gRg/NySJgC4JUUArj9zTk/PLx%2B9P0QGLSM0/uVSPAFgjgAacP3jEsCBGP96AiA1ARyE67%2BNACpr8f5v/NsJYHDGv48ASE0AA3P99xNARTXf/42/DAGQmgAG5PqXI4DBGH9ZAiA1AVRS4wuw61%2BeAAZh/HUIgNQEMADXvx4BVFDy/d/46xIAqQkgMNe/PgEEZfxtCKCwjP8fRCMTQECufzsCCMb42xIAqQmgoL3v/65/ewIIwvj7EEAAxt%2BPAEhNAJ25/n0JoJAtX4CNvz8BkJoAOnH9YxBAB8YfhwAK8A/gxiWAxlz/WATQkPHHIwBSE8BOS9//Xf%2BYBNCA8cclAFITQGWuf2wCqMj44xPADv4CbHwCqMT1H4MAKjD%2BcQiA1ASw0dz7v%2Bs/lvP72%2Bup94c4CuMfy/vb68kToBDjH5MASE0AG1y//7v%2B4xLATsY/tvM0/fwy0PuDQEufm/cE2MH1H58AVvp8/zf%2BY/gdgNcgsrjcuifABq7/cXy7%2Bk/PLx89Pgi0cP2m4wlAat8C8F2Ao7q1bU8AUrsZgKcARzO3aU8AUpsNwFOAo7i35btPABEwukcb9gpEag8D8BRgVEu2u%2BgJIAJGs3Szi1%2BBRMAo1mx11XcAERDd2o2u/hIsAqLass1NvwKJgGi2bnLzz6AiIIo9W9z19wAioLe9G9z9F2EioJcS2ys6Xv9rMlooeXSL/lMITwNqK72xaoP1NKCkWse1%2BsUWAnvUfqto9soiBNZo9Trd/J1dCNzT%2Bntk1y%2BtYmCa%2Bv54Eu5XG1EcW7RfCv8DL5iV/1roWS8AAAAASUVORK5CYII%3D%22%2C%20%22sizes%22%3A%20%22192x192%22%2C%20%22type%22%3A%20%22image/png%22%7D%2C%20%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAQfElEQVR4nO3duZkc2RGF0QQ%2BShCgwAR6QTtoJu2gFzRhlBGgggKmB9XoWnJ5S8SLcyzozhHuH1nVmE8bIX35%2Bu3H7J8BoIXvf/7xafbPwEf%2Bo0xi4AF%2BEghzeOgDGHuAY0RBfx5wBwYfoC1B0J4H2oDBBxhLEFznAZ5k9AFiEAPneGgHGH2A2MTAfh7UC0YfICcx8JyH84DhB1iDELjPQ7lh9AHWJgZ%2B8SA2ww9QjRAoHgCGH6C2yiFQ8hc3/ADcqhgCpX5hww/AM5VCoMQvavgBOKJCCHye/QP0ZvwBOKrCdixbOBX%2B4wHQ36pvA5b7pQw/AD2sFgJLfQRg/AHoZbWNWaJmVvuPAkBsK7wNSP8GwPgDMNoK25M6AFb4DwBATtk3KOUrjOwPHYC1ZPxIIN0bAOMPQDQZtylVAGR8wADUkG2jUryyyPZQAagtw0cC4d8AGH8AssmwXaEDIMMDBIB7om9Y2ACI/uAA4JXIWxYyACI/MAA4IuqmhQuAqA8KAM6KuG2hAiDiAwKAFqJtXJgAiPZgAKC1SFsXIgAiPRAA6CnK5k0PgCgPAgBGibB9UwMgwgMAgBlmb%2BC0AJj9iwPAbDO3cEoAGH8A%2BGnWJg4PAOMPAO/N2MahAWD8AeC%2B0Rs5LACMPwA8N3IrhwSA8QeAfUZt5vR/BwAAGK97ALj%2BAeCYEdvZNQCMPwCc03tDuwWA8QeAa3puqe8AAEBBXQLA9Q8AbfTa1OYBYPwBoK0e29o0AIw/APTRemN9BwAACmoWAK5/AOir5dY2CQDjDwBjtNpcHwEAQEGXA8D1DwBjtdhebwAAoKBLAeD6B4A5rm7w6QAw/gAw15Ut9hEAABR0KgBc/wAQw9lN9gYAAAo6HACufwCI5cw2ewMAAAUdCgDXPwDEdHSjvQEAgIJ2B4DrHwBiO7LV3gAAQEG7AsD1DwA57N1sbwAAoCABAAAFvQwAr/8BIJc92%2B0NADDcP//7n9k/ApT3NABc/0Brxh/GeLXh3gAAQEECABjG9Q9xPAwAr/%2BBlm7H/3//%2BvfEnwTqeLbl3gAAQEECAOjOq3%2BI524AeP0PAGt4tOneAABduf4hJgEAdGP8Ia4PAeD1PwCs5d62ewMAdPHo%2BvcngBCDAACa8%2Bof4hMAAFDQuwDw%2BT9wlesfYvp9470BAICCBADQjOsf8hAAQBPGH3L5OwB8/g/05k8AYa7brfcGALjM9Q/5CADgEuMPOQkAAChIAACnuf4hr8/b5guAwHHGH3J623xvAACgIAEAHOb6h/wEADCEfwMAYhEAwCGuf1iDAAB2M/6wDgEAAAUJAGAX1z%2Bs5bN/AwB4xfjDWr58/fbDGwAAKEgAAE%2B1uP79CSDEIwCAh7z6h3UJAAAoSAAAd7n%2BYW0CAAAKEgDAB65/WJ8AAN4x/lCDAAC68ieAEJMAAP7m%2Boc6BACwbZvxh2oEAAAUJAAA1z8UJAAAoCABAMW5/qEmAQCF9R5/fwIIcQkAAChIAEBRXv1DbQIACjL%2BgAAAgIIEABTj%2Bge2TQBAKcYfeCMAgC78CSDEJgCgCNc/cEsAAEBBAgAKcP0DvxMAsDjjD9wjAACgIAEAC3P9A48IAFiU8QeeEQBAc/4NAIhPAMCCXP/AKwIAFmP8gT0EAAAUJABgIa5/YC8BAAAFCQBYhOsfOEIAwAIijb8/AYQcBAAAFCQAILlI1z%2BQhwCAxIw/cJYAAICCBAAk5foHrhAAAFCQAICEol7//gQQ8hAAkEzU8QdyEQAAUJAAgERc/0ArAgCSMP5ASwIAAAoSAJCA6x9oTQBAcFnG358AQi4CAAAKEgAQWJbrH8hHAABAQQIAgnL9Az0JAAjI%2BAO9CQAAKEgAQDAZr39/Agj5CAAIJOP4AzkJAAAoSABAEK5/YCQBAAEYf2A0AQAABQkAmMz1D8wgAACgIAEAE61w/fs3ACAnAQCTrDD%2BQF4CAAAKEgAwgesfmE0AwGDGH4hAAABAQQIABnL9A1EIAOA0fwIIeQkAGMT1D0QiAGAA4w9EIwAAoCABAJ25/oGIBAB0ZPyBqAQAABQkAKCT1a9/fwIIuQkA6GD18QfyEwAAUJAAgMZc/0AGAgAAChIA0JDrH8hCAEAjxh/IRAAAh/kTQMhPAEADrn8gGwEAFxl/ICMBAAAFCQC4wPUPZCUA4CTjD2QmAACgIAEAJ1S%2B/v0JIKxBAABAQQIADqp8/QPrEABwgPEHViEAAKAgAQA7uf6BlQgA2MH4A6sRAABQkACAF1z/v/g3AGAdAgAAChIA8ITrH1iVAIAHjD%2BwMgEAAAUJALjD9Q%2BsTgDAb4w/UIEAAHbxJ4CwFgEAN1z/QBUCAP5i/IFK/jH7BwByEEhj%2BciF3rwBgM24EYvxZwQBAAAFCQDKc/0TieufUQQApRl/IjH%2BjCQAAKAgAUBZrn8icf0zmgCgJONPJMafGQQAABQkACjH9U8krn9mEQCUYvyJxPgzkwAAmMD4M5sAoAzXP8AvAgBgMNc/EQgASnD9E4XxJwoBwPKMP8BHAgBgENc/kQgAlub6JwrjTzQCgGUZf4DHBABAZ65/IhIALMn1TxTGn6gEAAAUJABYjuufKFz/RCYAWIrxJwrjT3QCAAAKEgAsw/VPFK5/MhAALMH4E4XxJwsBAAAFCQDSc/0TheufTAQAqRl/ojD%2BZCMAAC4y/mQkAEjL9Q9wngAAuMD1T1YCgJRc/0Rg/MlMAJCO8Qe4TgAAnOD6JzsBQCqufyIw/qxAAJCG8QdoRwAAHOD6ZxUCgBRc/0Rg/FmJACA84w/QngAA2MH1z2oEAKG5/onA%2BLMiAQAABQkAwnL9E4Hrn1UJAEIy/kRg/FmZAACAggQA4bj%2BicD1z%2BoEAKEYfyIw/lQgAABuGH%2BqEACE4foHGEcAAPzF9U8lAoAQXP/MZvypRgAwnfEHGE8AAOW5/qlIADCV65/ZjD9VCQCmMf4A8wgAoCzXP5UJAKZw/TOb8ac6AcBwxh9gPgEAlOP6BwHAYK5/ZjP%2B8JMAAICCBADDuP6ZzfUPvwgAhjD%2BzGb84T0BAAAFCQC6c/0zm%2BsfPvr05eu3H7N/COAccfWa8Yf7vAEAlmX84TEBAEm5/oErBACwJNc/PCcAgOUYf3hNAABAQQIAEvL5/2Ouf9hHAADLMP6wnwAAgIIEALAE1z8cIwCA9Iw/HCcAIBlfAARaEABAaq5/OEcAAGkZfzhPAABAQQIAEvH5/y%2Buf7hGAADpGH%2B4TgAAQEECAEjF9Q9tCABIwuf/xh9aEgBACsYf2hIAAFCQAADCc/1DewIACM34Qx8CABLwBUCgNQEAhOX6h34EABCS8Ye%2BBAAAFCQAILiKn/%2B7/qE/AQCEYvxhDAEAAAUJACAM1z%2BMIwCAEIw/jCUAILCKXwAExhAAwHSufxhPAABTGX%2BYQwAAQEECAIKq8Pm/6x/mEQDAFMYf5hIAwHDGH%2BYTAABQkACAgFb%2B/N/1DzEIAGAY4w9xCAAAKEgAAEO4/iEWAQB0Z/whHgEAwaz8BUAgDgEAdOX6h5gEANCN8Ye4BAAAFCQAIJCVPv93/UNsAgBozvhDfAIAAAoSAEBTrn/IQQAAzRh/yEMAQBDZvwBo/CEXAQAABQkA4DLXP%2BQjAIBLjD/kJAAggOyf/wP5CADgNNc/5CUAgFOMP%2BQmAACgIAEAHOb6h/wEAEyW7QuAxh/WIAAAoCABAOzm%2Bod1CABgF%2BMPaxEAMFG2z/%2BBdQgA4CXXP6xHAABPGX9YkwAAgIIEAEyS4fN/1z%2BsSwAAdxl/WJsAAD4w/rA%2BAQAABQkA4B3XP9QgAGCCqF8ANP5QhwAAgIIEALBtm%2BsfqhEAgPGHggQADBb183%2BgFgEAxbn%2BoSYBAIUZf6hLAABAQQIAinL9Q20CAAaK8gVA4w8IAAAoSABAMa5/YNsEAJRi/IE3AgAGifL5P8C2CQAow/UP3BIAUIDxB34nAGBxxh%2B4RwDAAD7/B6IRALAw1z/wiACARRl/4BkBAAAFCQBYkOsfeEUAQGejvwBo/IE9BAAAFCQAYCGuf2AvAQCLMP7AEQIAOvIPAAFRCQBYgOsfOEoAQHLGHzhDAABAQQIAEnP9A2cJAOik9xcAjT9whQAAgIIEACTk%2BgeuEgCQjPEHWhAA0EGvz/%2BNP9CKAACAggQAJOH6B1oSAJCA8QdaEwAAUJAAgMZafwHQ9Q/0IAAgMOMP9CIAAKAgAQBBuf6BngQANNTq83/jD/QmAACgIAEAwbj%2BgREEAARi/IFRBAA00ut/AATQgwCAIFz/wEgCAAIw/sBon7//%2Bcen2T8EADDO9z//%2BOQNAEzm%2BgdmEADQwNkvABp/YBYBAJMYf2AmAQAABQkAmMD1D8wmAOCio5//G38gAgEAAAV93raffw84%2BweBClz/wGxvm%2B8NAAxi/IFIBAAAFCQA4IK9XwB0/QPRCADozPgDEf0dAL4ICABru916bwCgI9c/EJUAgJNeff5v/IHIBAAAFPQuAHwPANpw/QPR/L7x3gBAY8YfyEAAwAlH/wdAANEIAGjI9Q9k8SEAfA8AzjH%2BQFT3tt0bAGjA%2BAPZCAAAKOhuAPgYAB77/QuArn8gskeb7g0AXGD8gawEAAAU9DAAfAwAz7n%2Bgeiebbk3AHDA2%2Bf/xh/ITgAAQEFPA8DHAPCR6x/I4NWGvxz4L1%2B//Wj34wAAI7wKgJcfAXgLAAC57Nlu3wEAgIIEAAAUtCsAfAwAADns3WxvAACgoN0B4C0AAMR2ZKu9AQCAgg4FgLcAABDT0Y32BgAACjocAN4CAEAsZ7bZGwAAKOhUAHgLAAAxnN1kbwAAoKDTAeAtAADMdWWLL70BEAEAMMfVDfYRAAAUdDkAvAUAgLFabK83AABQUJMA8BYAAMZotbnN3gCIAADoq%2BXW%2BggAAApqGgDeAgBAH603tvkbABEAAG312NYuHwGIAABoo9em%2Bg4AABTULQC8BQCAa3puadc3ACIAAM7pvaHdPwIQAQBwzIjt9B0AAChoSAB4CwAA%2B4zazGFvAEQAADw3ciuHfgQgAgDgvtEbOfw7ACIAAN6bsY1TvgQoAgDgp1mbOO2vAEQAANXN3MKpfwYoAgCoavYGTv93AGY/AAAYLcL2TQ%2BAbYvxIABghCibFyIAti3OAwGAXiJtXZgA2LZYDwYAWoq2caECYNviPSAAuCritoULgG2L%2BaAA4IyomxYyALYt7gMDgL0ib1nYANi22A8OAJ6JvmGhA2Db4j9AAPhdhu0K/wPe%2BvL124/ZPwMAPJJh%2BN%2BEfwNwK9ODBaCWbBuVKgC2Ld8DBmB9Gbcp3Q98y0cCAMyUcfjfpHsDcCvzgwcgt%2BwblDoAti3/fwAA8llhe9L/Ard8JABATysM/5v0bwBurfQfBoBYVtuYpX6ZW94GANDCasP/Zslf6pYQAOCMVYf/zVIfAdyz%2Bn9AANqrsB3L/4K3vA0A4JkKw/%2BmzC96SwgAcKvS8L8p9wvfEgIAtVUc/jdlf/FbQgCglsrD/6b8A7glBADWZvh/8SAeEAMAazD693koLwgBgJwM/3MezgFiACA2o7%2BfB3WSGACIweif46E1IAYAxjL613mAHQgCgLYMfnse6ACCAOAYg9%2BfBzyJKAD4ydjP4aEHJRCAVRj4mP4PatwlgfwHJUoAAAAASUVORK5CYII%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEq0lEQVR4nO3du1ksRxSF0RpMDBxCUBaKQ2EqDmWhEHAwcLkG4oqBefTj1KNPrRUAtPHPprr7A05lAI9Pz++9r4H93l5fTr2vocsFCHgOPQJv9g1FPLdWcVf9JiLmkppxV/nCQmaJGmE/RH9BMbNUjVbCPiFCZo+otQ5ZaDGzV1RDuz4VQqaGPWu9eaHFTC172toUtJipbWtjq4MWM61saW1V0GKmtbXNLQ5azPSypr1FQYuZ3pY2eDdoMTOKJS2Gv/qGnm4GbZ0Zzb0mrwYtZkZ1q01HDlK5GLR1ZnTXGv0RtJg5ikutOnKQylnQ1pmj+d6shSYVQQ/mj3/+7n0Jh/Y7aMeN/sS8zdd2LTSpCHoQ1jnGQymOGyP598+/el/CIX02bKEHYJ3jCLozMccSNKk8OD/3Y51jPT49v1voTsRch6BJRdAdXFtnj+z2EzSpCLoxZ+e6BN2QmOsTNKkIuhHr3IagGxBzO4IehEd2MQRdmXVuS9CkIuiKrHN7gq5EzH0ImlQEXYF17kfQwbbE7JFdHEGTiqADOWr0J2hSEXQQ6zwGQQcQ8zgETSqC3sk6j0XQO0TE7Bl0LEGTiqA3ctQYk6BJRdAbWOdxCXolMY9N0KQi6BWi19kju3iCJhVBL+TsfAyCXkDMxyFoUhH0Hdb5WAR9g5iPR9CdeGRXh6CvsM7HJGhSOflPsj/NsM5ZjzwW+hsxH5ugSUXQX1jn4xP0f8Scg6BJRdDFOmci6AnMEnMpgp5inWcyddAzxDzTOpcyedDZzRZzKRMHPcM6z2jKoGeIecZ1LmXSoLObNeZSJgx6hnWe2XRBZzfzOpcyWdDZ13n2mEuZKOjsMfNhmqCzs84fpgg6+zqL+X/pg84eM+fSB52ddT6XOujs6yzmn1IHzXzSBm2d5+QPzQRr8UES83VpF5o5CTqQde5P0Aci5vsETSqCPgjrvIygg9Q8P4t5OUGTiqAHZ53XEfTAxLyeoElF0AFq3BBa520EPSAxbydoUhH0YKzzPoIeiJj3E/ROUTeEYo4haFIR9ACscxxBdybmWILeIfsv4h6RoDuyzvEE3YmY6xA0qQi6A+tcj6A32npDKOa6BE0qgm7IOtcn6EbE3IagN/BCZVyCbsA6tyPoysTclqBJRdAVWef2BL3S0htCMfchaFIRdAXWuR9BBxNzX4JewQuV8Qk6kHXuT9BBxDwGQZOKoANY53EIeqFrN4RiHougSUXQO1jn8Qh6IzGP6eHt9eXU+yIgwtvry8lCL/D9htA6j0vQK4l5bIImlYdSPs4evS/kCKzzuD4bttB3fJ6fxXwMgiaV30E7dlxnncf2td2ziB+fnt/bXw7s8zVoRw5SOQvasYOj+d6shSaVH0FbaY7iUqsXF1rUjO5ao44cpHI1aCvNqG61eXOhRc1o7jXpyEEqd4O20oxiSYuLFlrU9La0wcVHDlHTy5r2Vp2hRU1ra5tbfVMoalrZ0tqmpxyipratjW1+bCdqatnTVkiUfjGACBEjGfJixVqzV1RD4SFaa9aIHsPwV9/WmqVqtFI1PmvNJTVHr9mainturX5ydzkeiHsOPY6fQ5x3BZ7DCPdPvwD87Hkn/3pkmQAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFJElEQVR4nO3cu3kb5xaG0QEeRwyYsAR34TpUputwFy6BCQOmdCBRBkEMMJf/sv/ZaxUgI/jePQNI55ymYJ6eXz56fwbqeX97PfX+DJe6fhhjZ5r6RtH8P2z03NM6hmb/McNnjVYhVP+PGD571A6h2h9u+JRUK4Tif6jhU1PpEM4l/zDjp7bSGytSk+HTQ4mnwe4ngPHTS4nt7QrA+Olt7wY3B2D8RLFni5sCMH6i2brJ1QEYP1Ft2eaqAIyf6NZudHEAxs8o1mx1UQDGz2iWbvZhAMbPqJZst+g/hYDR3A3A9Wd0jzY8G4DxcxT3tuwViNRuBuD6czRzm/YEILVvAbj+HNWtbXsCkNqXAFz/2P785+/eH2F41xv3BBiE8dfxOwDXnywut+4JMADXvx4BBHc5/n//+tHxkxzTeZq8/pDP5+Y9AQLz6lOfAEhNAEG5/m0IICDjb+fsCzBZPT2/fHgCBDN3/f0EWocAAvHq054ASE0AQbj+fQiA1AQQgOvfjwA6WzJ+vwDVIwBSE0BHXn36E0Anxh+DAEhNAB24/nEIoDHjj0UAwfkJtC4BNOT6xyMAUhNAI65/TAJowPjjEgCpCaAy1z82AVS0d/x+Aq1PAKQmgEq8+oxBABUY/zgEQGoCKMz1H4sASE0ABZW8/n4CbUMAhXj1GZMASE0ABbj+4xLATsY/NgGQmgB2qHX9/QLUjgBITQAbefc/BgFsYPzHIQBSE8BKrv+xCGAF4z8eAQTjJ9C2BLCQ639MAljA+I/rj94fgK8ixZbhdcwT4IFIg2wpw/inSQAkJ4A7XP/jE8AM489BAKQmgBtc/zwEcMX4cxEAqQngguufjwB+Mf6cBJBY9vFPkwCmacp7/RFAWq7/T+kDyHj9jf9/qQPIOH6+Sh1ARq7/V2kDyHj9jf+7lAFkHD+3pQwgI9f/tnQBZLz+xj8vXQBwKVUArj/X0gRg/NySJgC4JUUArj9zTk/PLx+9P0QGLSM0/uVSPAFgjgAacP3jEsCBGP96AiA1ARyE67+NACpr8f5v/NsJYHDGv48ASE0AA3P99xNARTXf/42/DAGQmgAG5PqXI4DBGH9ZAiA1AVRS4wuw61+eAAZh/HUIgNQEMADXvx4BVFDy/d/46xIAqQkgMNe/PgEEZfxtCKCwjP8fRCMTQECufzsCCMb42xIAqQmgoL3v/65/ewIIwvj7EEAAxt+PAEhNAJ25/n0JoJAtX4CNvz8BkJoAOnH9YxBAB8YfhwAK8A/gxiWAxlz/WATQkPHHIwBSE8BOS9//Xf+YBNCA8cclAFITQGWuf2wCqMj44xPADv4CbHwCqMT1H4MAKjD+cQiA1ASw0dz7v+s/lvP72+up94c4CuMfy/vb68kToBDjH5MASE0AG1y//7v+4xLATsY/tvM0/fwy0PuDQEufm/cE2MH1H58AVvp8/zf+Y/gdgNcgsrjcuifABq7/cXy7+k/PLx89Pgi0cP2m4wlAat8C8F2Ao7q1bU8AUrsZgKcARzO3aU8AUpsNwFOAo7i35btPABEwukcb9gpEag8D8BRgVEu2u+gJIAJGs3Szi1+BRMAo1mx11XcAERDd2o2u/hIsAqLass1NvwKJgGi2bnLzz6AiIIo9W9z19wAioLe9G9z9F2EioJcS2ys6Xv9rMlooeXSL/lMITwNqK72xaoP1NKCkWse1+sUWAnvUfqto9soiBNZo9Trd/J1dCNzT+ntk1y+tYmCa+v54Eu5XG1EcW7RfCv8DL5iV/1roWS8AAAAASUVORK5CYII=">
+<style>
+:root{
+  --bg:#0a0e13; --bg2:#121821; --card:#161d28; --card2:#1c2531;
+  --line:rgba(255,255,255,.08); --txt:#eef2f6; --muted:rgba(238,242,246,.55);
+  --teal:#2dd4bf; --teal-d:#14b8a6; --red:#f87171; --amber:#fbbf24;
+  --shadow:0 6px 24px rgba(0,0,0,.35); --r:16px;
+  --safe-b:env(safe-area-inset-bottom,0px); --safe-t:env(safe-area-inset-top,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  overscroll-behavior-y:none}
+body{padding-top:var(--safe-t)}
+a{color:var(--teal);text-decoration:none}
+h1,h2,h3{margin:0 0 .3em}
+.muted{color:var(--muted)}
+.wrap{max-width:760px;margin:0 auto;padding:16px 16px calc(96px + var(--safe-b))}
+
+/* Top bar */
+.appbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;
+  padding:calc(12px + var(--safe-t)) 16px 12px;background:linear-gradient(#0a0e13,rgba(10,14,19,.86));
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.appbar .logo{font-weight:800;letter-spacing:.5px;font-size:20px}
+.appbar .logo b{color:var(--teal)}
+.appbar .spacer{flex:1}
+.iconbtn{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:12px;
+  width:40px;height:40px;display:grid;place-items:center;font-size:18px;cursor:pointer}
+.iconbtn:active{transform:scale(.94)}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0;box-shadow:var(--shadow)}
+.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
+.grid{display:grid;gap:12px}
+.grid.two{grid-template-columns:1fr 1fr}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:520px){.grid.three{grid-template-columns:repeat(3,1fr)}}
+
+/* Stat tiles */
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat .n{font-size:26px;font-weight:800;line-height:1}
+.stat .l{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:6px}
+.stat .n small{font-size:13px;color:var(--muted);font-weight:600}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;
+  background:var(--teal);color:#04201c;font-weight:700;border-radius:12px;padding:12px 16px;font-size:15px}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:var(--card2);color:var(--txt);border:1px solid var(--line)}
+.btn.red{background:var(--red);color:#2a0808}
+.btn.block{width:100%}
+.btn.sm{padding:8px 12px;font-size:13px;border-radius:10px}
+.row{display:flex;gap:10px;align-items:center}
+.row.wrap{flex-wrap:wrap}
+.right{margin-left:auto}
+
+/* Lists */
+.list{display:flex;flex-direction:column;gap:8px}
+.item{display:flex;align-items:center;gap:12px;background:var(--card2);border:1px solid var(--line);
+  border-radius:12px;padding:12px 14px}
+.item .grow{flex:1;min-width:0}
+.item .t{font-weight:600}
+.item .s{font-size:12px;color:var(--muted)}
+.item .dot{width:10px;height:10px;border-radius:50%;flex:none;border:1px solid rgba(255,255,255,.25)}
+.badge{font-size:11px;padding:3px 8px;border-radius:20px;background:rgba(45,212,191,.15);color:var(--teal);font-weight:700}
+.badge.gray{background:rgba(255,255,255,.08);color:var(--muted)}
+
+/* Inputs */
+label.field{display:block;margin:10px 0}
+label.field .lab{font-size:12px;color:var(--muted);margin-bottom:5px;display:block;text-transform:uppercase;letter-spacing:.4px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--txt);
+  border-radius:10px;padding:11px 12px;font-size:16px;font-family:inherit}
+input:focus,select,textarea:focus{outline:2px solid var(--teal-d);outline-offset:0}
+textarea{min-height:70px;resize:vertical}
+.inline{display:flex;gap:8px;align-items:center}
+.chip{padding:8px 12px;border-radius:20px;border:1px solid var(--line);background:var(--card2);cursor:pointer;font-size:13px;white-space:nowrap}
+.chip.active{background:var(--teal);color:#04201c;border-color:var(--teal);font-weight:700}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+
+/* Charts */
+.chart{width:100%;height:auto;display:block}
+.chart.heat{max-height:180px}
+
+/* Timer */
+.timer{font-variant-numeric:tabular-nums;font-size:52px;font-weight:800;text-align:center;letter-spacing:1px}
+.pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* Bottom nav */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:space-around;
+  background:rgba(18,24,33,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  padding:8px 6px calc(8px + var(--safe-b))}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);font-size:10px;
+  padding:4px 10px;border-radius:10px;min-width:56px}
+.nav a.active{color:var(--teal)}
+.nav a .ic{font-size:20px;line-height:1}
+
+/* Modal / sheet */
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40;display:none}
+.sheet-bg.open{display:block}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;background:var(--bg2);border-top-left-radius:20px;
+  border-top-right-radius:20px;border-top:1px solid var(--line);padding:18px 16px calc(20px + var(--safe-b));
+  max-height:88vh;overflow:auto;transform:translateY(100%);transition:transform .25s ease}
+.sheet.open{transform:translateY(0)}
+.sheet .handle{width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.2);margin:0 auto 14px}
+.toast{position:fixed;bottom:calc(84px + var(--safe-b));left:50%;transform:translateX(-50%);
+  background:#0f1620;border:1px solid var(--line);color:var(--txt);padding:11px 16px;border-radius:12px;
+  box-shadow:var(--shadow);z-index:60;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%}
+.toast.show{opacity:1}
+.empty{text-align:center;color:var(--muted);padding:30px 10px}
+.empty .big{font-size:40px;margin-bottom:8px}
+.setrow{display:grid;grid-template-columns:26px 1fr 1fr auto;gap:8px;align-items:center;margin:6px 0}
+.setrow .idx{color:var(--muted);text-align:center}
+hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.link{color:var(--teal);cursor:pointer;font-weight:600}
+.danger{color:var(--red)}
+
+/* ---- Auth screen ---- */
+.auth-wrap{max-width:420px;margin:0 auto;padding:calc(40px + var(--safe-t)) 20px 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.auth-logo{text-align:center;font-weight:800;font-size:34px;letter-spacing:1px;margin-bottom:6px}
+.auth-logo b{color:var(--teal)}
+.auth-sub{text-align:center;color:var(--muted);margin-bottom:26px;font-size:14px}
+.auth-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.auth-tabs{display:flex;gap:6px;background:var(--bg2);border-radius:12px;padding:4px;margin-bottom:18px}
+.auth-tabs button{flex:1;background:transparent;border:none;color:var(--muted);padding:10px;border-radius:9px;font-weight:700;cursor:pointer;font-size:14px}
+.auth-tabs button.active{background:var(--teal);color:#04201c}
+.auth-msg{font-size:13px;margin-top:10px;padding:10px 12px;border-radius:10px;display:none}
+.auth-msg.err{display:block;background:rgba(248,113,113,.12);color:#fca5a5;border:1px solid rgba(248,113,113,.3)}
+.auth-msg.ok{display:block;background:rgba(45,212,191,.12);color:var(--teal);border:1px solid rgba(45,212,191,.3)}
+.auth-foot{text-align:center;margin-top:18px;font-size:12px;color:var(--muted)}
+.userchip{font-size:12px;color:var(--muted);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spin{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--teal);border-radius:50%;animation:sp .7s linear infinite;vertical-align:-3px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.cloud-badge{font-size:10px;color:var(--teal);border:1px solid rgba(45,212,191,.3);border-radius:20px;padding:2px 8px}
+
+/* ---- Home hero photo ---- */
+.hero{position:relative;border-radius:var(--r);overflow:hidden;min-height:190px;display:flex;align-items:flex-end;
+  background:linear-gradient(135deg,#14212b,#101722);background-size:cover;background-position:center;margin:12px 0;box-shadow:var(--shadow)}
+.hero.has-photo{min-height:240px}
+.hero-overlay{position:relative;width:100%;padding:16px;background:linear-gradient(transparent,rgba(6,10,15,.85))}
+.hero-overlay h1{font-size:22px;margin:.1em 0 .55em;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.hero-cam{position:absolute;top:10px;right:10px;z-index:2;background:rgba(10,14,19,.55);border:1px solid var(--line);color:#fff;
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:17px;cursor:pointer;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.brandline{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--teal);font-weight:700;margin-bottom:4px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+
+</style>
+</head>
+<body>
+<div id="root"><div class="empty" style="padding-top:40vh"><div class="big">&#9889;</div><span class="spin"></span></div></div>
+<div class="sheet-bg" id="sheetBg"></div>
+<div class="sheet" id="sheet"><div class="handle"></div><div id="sheetBody"></div></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// Douglas & Talita Haggist's X3 App — Supabase connection (public values, safe to ship).
+// The publishable key is browser-safe; Row-Level Security keeps each account's data private.
+window.V3ME_CONFIG = {
+  SUPABASE_URL: "https://etbeqiotkgpbrpzxtrzx.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_OGE2Njhyu78QrFZEDXSdJA_M2Rxv9om"
+};
+
+</script>
+<script>
+// V3ME Cloud — data layer backed by Supabase (Postgres + Auth + RLS).
+// Same shape the app expects, but async and scoped to the logged-in user.
+const Supa = (() => {
+  // Effective config: a locally-saved config (first-run setup) overrides the baked config.js.
+  const CFG_KEY = 'v3me_cfg';
+  function readCfg(){
+    try { const s = JSON.parse(localStorage.getItem(CFG_KEY) || 'null'); if (s && s.SUPABASE_URL) return s; } catch(e){}
+    return window.V3ME_CONFIG || {};
+  }
+  const cfg = readCfg();
+  const isPlaceholder = v => !v || String(v).indexOf('__') === 0;
+  const configured = !isPlaceholder(cfg.SUPABASE_URL) && !isPlaceholder(cfg.SUPABASE_ANON_KEY);
+  function saveConfig(url, key){
+    localStorage.setItem(CFG_KEY, JSON.stringify({ SUPABASE_URL: url.trim().replace(/\/+$/,''), SUPABASE_ANON_KEY: key.trim() }));
+    location.reload();
+  }
+  const client = configured ? window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY, {
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+  }) : null;
+  let _uid = null;
+
+  // ---- auth ----
+  const onAuth = (cb) => client.auth.onAuthStateChange((_e, s) => { _uid = s?.user?.id || null; cb(s?.user || null); });
+  async function currentUser(){ const { data } = await client.auth.getUser(); _uid = data?.user?.id || null; return data?.user || null; }
+  const signUp = (email, password) => client.auth.signUp({ email, password });
+  const signIn = (email, password) => client.auth.signInWithPassword({ email, password });
+  const signOut = () => client.auth.signOut();
+  const resetPassword = (email) => client.auth.resetPasswordForEmail(email);
+
+  // ---- row <-> app object mappers ----
+  const M = {
+    bands: {
+      toRow: b => ({ id:b.id, user_id:_uid, name:b.name, brand:b.brand, color:b.color, description:b.description,
+        min_kg:b.minKg, max_kg:b.maxKg, key:b.key, ord:b.order||0 }),
+      fromRow: r => ({ id:r.id, name:r.name, brand:r.brand, color:r.color, description:r.description,
+        minKg:r.min_kg, maxKg:r.max_kg, key:r.key, order:r.ord||0 })
+    },
+    movements: {
+      toRow: m => ({ id:m.id, user_id:_uid, name:m.name, resistance_type:m.resistanceType||'band',
+        band_doubled:!!m.bandDoubled, track_reps:m.trackReps!==false, track_partial_reps:m.trackPartialReps!==false,
+        track_resistance:m.trackResistance!==false, track_duration:!!m.trackDuration, description:m.description, ord:m.order||0 }),
+      fromRow: r => ({ id:r.id, name:r.name, resistanceType:r.resistance_type, bandDoubled:r.band_doubled,
+        trackReps:r.track_reps, trackPartialReps:r.track_partial_reps, trackResistance:r.track_resistance,
+        trackDuration:r.track_duration, description:r.description, order:r.ord||0 })
+    },
+    templates: {
+      toRow: t => ({ id:t.id, user_id:_uid, name:t.name, items:t.items||[] }),
+      fromRow: r => ({ id:r.id, name:r.name, items:r.items||[] })
+    },
+    workouts: {
+      toRow: w => ({ id:w.id, user_id:_uid, date:w.date, duration_sec:w.durationSec||0, notes:w.notes,
+        auto_saved:!!w.autoSaved, rest_timers:w.restTimers||[], exercises:w.exercises||[] }),
+      fromRow: r => ({ id:r.id, date:r.date, durationSec:r.duration_sec, notes:r.notes, autoSaved:r.auto_saved,
+        restTimers:r.rest_timers||[], exercises:r.exercises||[] })
+    }
+  };
+  const isUuid = s => typeof s==='string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(s);
+
+  // ---- reads ----
+  async function loadAll(){
+    const [b,m,t,w,p] = await Promise.all([
+      client.from('bands').select('*').order('ord',{ascending:true}),
+      client.from('movements').select('*').order('ord',{ascending:true}),
+      client.from('templates').select('*'),
+      client.from('workouts').select('*').order('date',{ascending:false}),
+      client.from('profiles').select('*').maybeSingle()
+    ]);
+    for(const r of [b,m,t,w]) if(r.error) throw r.error;
+    return {
+      bands: (b.data||[]).map(M.bands.fromRow),
+      movements: (m.data||[]).map(M.movements.fromRow),
+      templates: (t.data||[]).map(M.templates.fromRow),
+      workouts: (w.data||[]).map(M.workouts.fromRow),
+      prefs: (p.data && p.data.prefs) || {}
+    };
+  }
+
+  // ---- writes ----
+  async function put(store, obj){
+    const row = M[store].toRow(obj);
+    if(!isUuid(row.id)) delete row.id; // let DB generate
+    const { data, error } = await client.from(store).upsert(row).select().single();
+    if(error) throw error;
+    return M[store].fromRow(data);
+  }
+  async function del(store, id){ const { error } = await client.from(store).delete().eq('id', id); if(error) throw error; }
+
+  // ---- prefs (units, plan) stored in profiles.prefs ----
+  async function getPrefs(){ const { data } = await client.from('profiles').select('prefs').maybeSingle(); return (data&&data.prefs)||{}; }
+  async function setPref(key, value){
+    const prefs = await getPrefs(); prefs[key]=value;
+    const { error } = await client.from('profiles').update({ prefs }).eq('id', _uid);
+    if(error) throw error; return prefs;
+  }
+
+  // ---- import a v3me export bundle into this account ----
+  async function importBundle(bundle, { replace=false } = {}){
+    const counts = {};
+    if(replace){ for(const s of ['workouts','templates','movements','bands']) await client.from(s).delete().eq('user_id', _uid); }
+    for(const store of ['bands','movements','templates','workouts']){
+      const items = (bundle[store]||[]).map(M[store].toRow).map(r=>{ if(!isUuid(r.id)) delete r.id; return r; });
+      counts[store]=0;
+      for(let i=0;i<items.length;i+=500){
+        const chunk = items.slice(i,i+500);
+        const { error } = await client.from(store).upsert(chunk);
+        if(error) throw error; counts[store]+=chunk.length;
+      }
+    }
+    if(bundle.settings){ const prefs=await getPrefs(); Object.assign(prefs, { units:bundle.settings.units||prefs.units||'lb' });
+      await client.from('profiles').update({ prefs }).eq('id',_uid); }
+    return counts;
+  }
+
+  function exportBundle(state){
+    return { app:'V3ME-Cloud', schema:1, exportedAt:new Date().toISOString(), source:'v3me-cloud',
+      settings:{ units: state.units }, bands:state.bands, movements:state.movements,
+      templates:state.templates, workouts:state.workouts };
+  }
+
+  return { client, configured, saveConfig, onAuth, currentUser, signUp, signIn, signOut, resetPassword,
+    loadAll, put, del, getPrefs, setPref, importBundle, exportBundle };
+})();
+
+</script>
+<script>
+// V3ME Local — tiny dependency-free SVG charts (works fully offline).
+const Charts = (() => {
+  const TEAL = '#2dd4bf', GRID = 'rgba(255,255,255,0.07)', TXT = 'rgba(255,255,255,0.55)';
+  const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+  // Bar chart. data = [{label, value}], opts {height, unit, color}
+  function bar(data, opts = {}) {
+    const W = 640, H = opts.height || 220, padL = 40, padB = 26, padT = 12, padR = 8;
+    const iw = W - padL - padR, ih = H - padT - padB;
+    const max = Math.max(1, ...data.map(d => d.value));
+    const bw = iw / Math.max(1, data.length);
+    const color = opts.color || TEAL;
+    let bars = '', labels = '';
+    const step = Math.ceil(data.length / 12);
+    data.forEach((d, i) => {
+      const h = (d.value / max) * ih;
+      const x = padL + i * bw + bw * 0.12;
+      const y = padT + ih - h;
+      bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.76).toFixed(1)}" height="${Math.max(0,h).toFixed(1)}" rx="2" fill="${color}"><title>${esc(d.label)}: ${d.value}${opts.unit||''}</title></rect>`;
+      if (i % step === 0) labels += `<text x="${(padL+i*bw+bw/2).toFixed(1)}" y="${H-8}" fill="${TXT}" font-size="10" text-anchor="middle">${esc(d.label)}</text>`;
+    });
+    let grid = '';
+    for (let g = 0; g <= 4; g++) {
+      const y = padT + (ih/4)*g; const v = Math.round(max - (max/4)*g);
+      grid += `<line x1="${padL}" y1="${y.toFixed(1)}" x2="${W-padR}" y2="${y.toFixed(1)}" stroke="${GRID}"/>`;
+      grid += `<text x="${padL-6}" y="${(y+3).toFixed(1)}" fill="${TXT}" font-size="10" text-anchor="end">${v}</text>`;
+    }
+    return `<svg viewBox="0 0 ${W} ${H}" class="chart" preserveAspectRatio="xMidYMid meet">${grid}${bars}${labels}</svg>`;
+  }
+
+  // Line chart. data = [{label, value}]
+  function line(data, opts = {}) {
+    const W = 640, H = opts.height || 220, padL = 40, padB = 26, padT = 12, padR = 8;
+    const iw = W - padL - padR, ih = H - padT - padB;
+    if (!data.length) return '<div class="muted">No data</div>';
+    const vals = data.map(d => d.value);
+    const max = Math.max(...vals), min = Math.min(...vals);
+    const range = (max - min) || 1;
+    const color = opts.color || TEAL;
+    const X = i => padL + (iw) * (data.length === 1 ? 0.5 : i / (data.length - 1));
+    const Y = v => padT + ih - ((v - min) / range) * ih;
+    let pts = data.map((d, i) => `${X(i).toFixed(1)},${Y(d.value).toFixed(1)}`).join(' ');
+    let area = `${padL},${padT+ih} ${pts} ${(padL+iw).toFixed(1)},${padT+ih}`;
+    let dots = data.map((d,i) => `<circle cx="${X(i).toFixed(1)}" cy="${Y(d.value).toFixed(1)}" r="2.4" fill="${color}"><title>${esc(d.label)}: ${d.value}${opts.unit||''}</title></circle>`).join('');
+    let grid = '';
+    for (let g = 0; g <= 4; g++) {
+      const y = padT + (ih/4)*g; const v = (max - (range/4)*g);
+      grid += `<line x1="${padL}" y1="${y.toFixed(1)}" x2="${W-padR}" y2="${y.toFixed(1)}" stroke="${GRID}"/>`;
+      grid += `<text x="${padL-6}" y="${(y+3).toFixed(1)}" fill="${TXT}" font-size="10" text-anchor="end">${Math.round(v)}</text>`;
+    }
+    const step = Math.ceil(data.length / 8);
+    let labels = data.map((d,i)=> i%step===0 ? `<text x="${X(i).toFixed(1)}" y="${H-8}" fill="${TXT}" font-size="10" text-anchor="middle">${esc(d.label)}</text>`:'').join('');
+    return `<svg viewBox="0 0 ${W} ${H}" class="chart" preserveAspectRatio="xMidYMid meet">${grid}
+      <polygon points="${area}" fill="${color}" opacity="0.12"/>
+      <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2"/>${dots}${labels}</svg>`;
+  }
+
+  // Heatmap of activity by day (GitHub-style), weeks x 7. days = Map(dateStr -> count)
+  function heat(byDate, opts = {}) {
+    const weeks = opts.weeks || 26;
+    const cell = 13, gap = 3, W = weeks * (cell + gap) + 30, H = 7 * (cell + gap) + 20;
+    const today = new Date(); today.setHours(0,0,0,0);
+    const start = new Date(today); start.setDate(start.getDate() - (weeks*7 - 1));
+    // align start to Sunday
+    start.setDate(start.getDate() - start.getDay());
+    let rects = '';
+    let max = 0; byDate.forEach(v => { if (v>max) max=v; });
+    const shade = v => v === 0 ? 'rgba(255,255,255,0.05)'
+      : `rgba(45,212,191,${(0.25 + 0.75 * Math.min(1, v / Math.max(1,max))).toFixed(2)})`;
+    for (let w = 0; w < weeks; w++) {
+      for (let d = 0; d < 7; d++) {
+        const cur = new Date(start); cur.setDate(start.getDate() + w*7 + d);
+        if (cur > today) continue;
+        const key = cur.toISOString().slice(0,10);
+        const v = byDate.get(key) || 0;
+        const x = 24 + w*(cell+gap), y = 4 + d*(cell+gap);
+        rects += `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2.5" fill="${shade(v)}"><title>${key}: ${v} workout(s)</title></rect>`;
+      }
+    }
+    const dow = ['','Mon','','Wed','','Fri',''];
+    let labels = dow.map((t,i)=> t?`<text x="18" y="${4+i*(cell+gap)+cell-2}" fill="${TXT}" font-size="9" text-anchor="end">${t}</text>`:'').join('');
+    return `<svg viewBox="0 0 ${W} ${H}" class="chart heat" preserveAspectRatio="xMidYMid meet">${labels}${rects}</svg>`;
+  }
+
+  return { bar, line, heat };
+})();
+
+</script>
+<script>
+// V3ME Cloud — app with Supabase auth + per-user sync. Reuses the V3ME UI.
+const App = (() => {
+  const $ = (s, r=document) => r.querySelector(s);
+  let state = { user:null, units:'lb', prefs:{}, movements:[], bands:[], templates:[], workouts:[], session:null, route:'home', chrome:false };
+
+  // ---------- helpers ----------
+  const KG2LB = 2.2046226218;
+  const toDisp = kg => state.units==='kg' ? kg : kg*KG2LB;
+  const uName = () => state.units;
+  const round = (n,d=0)=>{const p=10**d;return Math.round(n*p)/p;};
+  const uuid = () => (crypto.randomUUID ? crypto.randomUUID() :
+    'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return (c==='x'?r:(r&0x3|0x8)).toString(16);}));
+  const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function fmtDur(sec){ sec=Math.max(0,Math.round(sec||0)); const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;
+    if(h) return `${h}h ${String(m).padStart(2,'0')}m`; return `${m}:${String(s).padStart(2,'0')}`; }
+  function fmtClock(sec){ sec=Math.max(0,Math.round(sec)); const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;
+    return (h?`${h}:`:'')+`${String(m).padStart(h?2:1,'0')}:${String(s).padStart(2,'0')}`; }
+  const DAY=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const d = dt => new Date(dt);
+  function fmtDate(dt){ const x=d(dt); return `${DAY[x.getDay()]} ${MON[x.getMonth()]} ${x.getDate()}, ${x.getFullYear()}`; }
+  function fmtShort(dt){ const x=d(dt); return `${MON[x.getMonth()]} ${x.getDate()}`; }
+  function dayKey(dt){ const x=d(dt); return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`; }
+  function toLocalInput(dt){ const x=d(dt); const p=n=>String(n).padStart(2,'0');
+    return `${x.getFullYear()}-${p(x.getMonth()+1)}-${p(x.getDate())}T${p(x.getHours())}:${p(x.getMinutes())}`; }
+  const movName = id => (state.movements.find(m=>m.id===id)||{}).name || 'Movement';
+  const bandById = id => state.bands.find(b=>b.id===id);
+  function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),2400); }
+  const openSheet=html=>{ $('#sheetBody').innerHTML=html; $('#sheetBg').classList.add('open'); $('#sheet').classList.add('open'); };
+  const closeSheet=()=>{ $('#sheetBg').classList.remove('open'); $('#sheet').classList.remove('open'); };
+  $('#sheetBg').addEventListener('click', closeSheet);
+
+  // ---------- prefs / session ----------
+  const plan = () => state.prefs.plan || { days:[1,3,5], reminder:null, templateByDay:{} };
+  async function savePlan(p){ state.prefs.plan=p; try{ await Supa.setPref('plan',p);}catch(e){} }
+  const sessKey='v3me_active_session';
+  const loadSession=()=>{ try{ return JSON.parse(localStorage.getItem(sessKey)||'null'); }catch(e){ return null; } };
+  const saveSession=s=>{ try{ s?localStorage.setItem(sessKey,JSON.stringify(s)):localStorage.removeItem(sessKey); }catch(e){} };
+
+  // ---------- boot / auth ----------
+  async function boot(){
+    if(!Supa.configured){ showSetup(); return; }
+    Supa.onAuth(async (user)=>{
+      state.user=user;
+      if(user){ await enterApp(); } else { state.chrome=false; showAuth(); }
+    });
+    const user = await Supa.currentUser();
+    state.user=user;
+    if(user) await enterApp(); else showAuth();
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
+    setInterval(tick,1000);
+  }
+
+  function showSetup(){
+    $('#root').innerHTML = `
+      <div class="auth-wrap">
+        <div class="auth-logo">Douglas &amp; Talita <b>X3</b></div>
+        <div class="auth-sub">One-time setup — connect your Supabase project.</div>
+        <div class="auth-card">
+          <label class="field"><span class="lab">Supabase Project URL</span><input id="cfg_url" placeholder="https://xxxx.supabase.co"></label>
+          <label class="field"><span class="lab">Anon public key</span><input id="cfg_key" placeholder="eyJhbGciOi..."></label>
+          <div id="cfg_msg" class="auth-msg"></div>
+          <button class="btn block" style="margin-top:8px" onclick="App.saveSetup()">Connect</button>
+          <div class="auth-foot">These are your project's public values (Settings → API). Saved on this device only.</div>
+        </div>
+      </div>`;
+  }
+  function saveSetup(){
+    const url=($('#cfg_url').value||'').trim(), key=($('#cfg_key').value||'').trim();
+    const el=$('#cfg_msg');
+    if(!/^https:\/\/.+\.supabase\.co/.test(url)){ el.className='auth-msg err'; el.textContent='Enter a valid Supabase URL (https://xxxx.supabase.co).'; return; }
+    if(key.length<20){ el.className='auth-msg err'; el.textContent='That anon key looks too short.'; return; }
+    Supa.saveConfig(url, key);
+  }
+
+  function showAuth(mode='login'){
+    $('#root').innerHTML = `
+      <div class="auth-wrap">
+        <div class="auth-logo">Douglas &amp; Talita <b>X3</b></div>
+        <div class="auth-sub">Douglas &amp; Talita Haggist&rsquo;s X3 &mdash; your training, synced privately across your devices.</div>
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button id="tabLogin" class="${mode==='login'?'active':''}" onclick="App.authMode('login')">Log in</button>
+            <button id="tabSignup" class="${mode==='signup'?'active':''}" onclick="App.authMode('signup')">Sign up</button>
+          </div>
+          <label class="field"><span class="lab">Email</span><input id="auth_email" type="email" autocomplete="email" placeholder="you@email.com"></label>
+          <label class="field"><span class="lab">Password</span><input id="auth_pw" type="password" autocomplete="${mode==='signup'?'new-password':'current-password'}" placeholder="${mode==='signup'?'At least 6 characters':'Your password'}"></label>
+          <div id="auth_msg" class="auth-msg"></div>
+          <button class="btn block" id="auth_btn" style="margin-top:8px" onclick="App.authSubmit('${mode}')">${mode==='signup'?'Create account':'Log in'}</button>
+          ${mode==='login'?`<div class="auth-foot"><span class="link" onclick="App.forgot()">Forgot password?</span></div>`:
+            `<div class="auth-foot">By signing up you get your own private space. Your data is yours.</div>`}
+        </div>
+        <div class="auth-foot" style="margin-top:22px">Private · your data stays yours · <span class="cloud-badge">synced</span></div>
+      </div>`;
+    const pw=$('#auth_pw'); if(pw) pw.addEventListener('keydown',e=>{ if(e.key==='Enter') App.authSubmit(mode); });
+  }
+  function authMode(m){ showAuth(m); }
+  function authMsg(type,text){ const el=$('#auth_msg'); if(!el)return; el.className='auth-msg '+type; el.textContent=text; }
+  async function authSubmit(mode){
+    const email=($('#auth_email').value||'').trim(); const pw=$('#auth_pw').value||'';
+    if(!email||!pw){ authMsg('err','Enter your email and password.'); return; }
+    if(mode==='signup'&&pw.length<6){ authMsg('err','Password must be at least 6 characters.'); return; }
+    const btn=$('#auth_btn'); btn.disabled=true; btn.innerHTML='<span class="spin"></span>';
+    try{
+      if(mode==='signup'){
+        const { data, error } = await Supa.signUp(email,pw);
+        if(error) throw error;
+        if(data.user && !data.session){ authMsg('ok','Account created. Check your email to confirm, then log in.'); btn.disabled=false; btn.textContent='Create account'; return; }
+      } else {
+        const { error } = await Supa.signIn(email,pw); if(error) throw error;
+      }
+      // onAuth handler will enter the app
+    }catch(err){ authMsg('err', err.message||'Something went wrong.'); btn.disabled=false; btn.textContent=mode==='signup'?'Create account':'Log in'; }
+  }
+  async function forgot(){ const email=($('#auth_email').value||'').trim(); if(!email){ authMsg('err','Enter your email first.'); return; }
+    try{ await Supa.resetPassword(email); authMsg('ok','Password reset link sent (check your email).'); }catch(e){ authMsg('err',e.message); } }
+
+  function buildChrome(){
+    $('#root').innerHTML = `
+      <div class="appbar">
+        <div class="logo">Haggist <b>X3</b> <span class="cloud-badge">synced</span></div>
+        <div class="spacer"></div>
+        <span class="userchip" id="userChip"></span>
+        <button class="iconbtn" id="btnData" title="Account & data">&#9776;</button>
+      </div>
+      <div id="view" class="wrap"></div>
+      <nav class="nav" id="nav">
+        <a data-route="home" class="active"><span class="ic">&#127968;</span>Home</a>
+        <a data-route="workouts"><span class="ic">&#9889;</span>Workouts</a>
+        <a data-route="log"><span class="ic">&#9679;</span>Log</a>
+        <a data-route="progress"><span class="ic">&#128200;</span>Progress</a>
+        <a data-route="plan"><span class="ic">&#128197;</span>Plan</a>
+      </nav>`;
+    $('#btnData').addEventListener('click', dataMenu);
+    document.addEventListener('click', navClick);
+    state.chrome=true;
+  }
+  function navClick(e){ const a=e.target.closest('#nav [data-route]'); if(a){ e.preventDefault(); go(a.dataset.route); } }
+
+  async function enterApp(){
+    if(!state.chrome) buildChrome();
+    $('#userChip').textContent = state.user?.email || '';
+    state.session = loadSession();
+    $('#view').innerHTML = `<div class="empty" style="padding-top:80px"><span class="spin"></span><div class="muted" style="margin-top:10px">Loading your data…</div></div>`;
+    await loadData();
+    if(location.hash) state.route=location.hash.slice(1)||'home';
+    render();
+  }
+  async function loadData(){
+    try{
+      const dta = await Supa.loadAll();
+      state.bands=dta.bands; state.movements=dta.movements; state.templates=dta.templates; state.workouts=dta.workouts;
+      state.prefs=dta.prefs||{}; state.units=state.prefs.units||'lb';
+    }catch(e){ toast('Load error: '+(e.message||e)); }
+  }
+  const refresh = loadData;
+
+  // ---------- routing ----------
+  function go(route){ state.route=route; location.hash=route; render(); window.scrollTo(0,0); }
+  window.addEventListener('hashchange', ()=>{ const r=location.hash.slice(1); if(r&&r!==state.route&&state.chrome){ state.route=r; render(); } });
+  function render(){
+    if(!state.chrome) return;
+    document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('active', a.dataset.route===state.route));
+    const R={ home:renderHome, workouts:renderWorkouts, log:renderLog, progress:renderProgress, plan:renderPlan };
+    (R[state.route]||renderHome)();
+  }
+
+  // ---------- analytics ----------
+  const view = () => $('#view');
+  function weekStart(dt){ const x=d(dt); x.setHours(0,0,0,0); x.setDate(x.getDate()-x.getDay()); return x; }
+  function byDateMap(){ const m=new Map(); state.workouts.forEach(w=>{ const k=dayKey(w.date); m.set(k,(m.get(k)||0)+1); }); return m; }
+  function currentStreak(){ const set=new Set(state.workouts.map(w=>dayKey(w.date)));
+    let s=0; let cur=new Date(); cur.setHours(0,0,0,0);
+    if(!set.has(dayKey(cur))) cur.setDate(cur.getDate()-1);
+    while(set.has(dayKey(cur))){ s++; cur.setDate(cur.getDate()-1); } return s; }
+  function weeklyCounts(weeks=14){ const now=weekStart(new Date()); const out=[];
+    for(let i=weeks-1;i>=0;i--){ const ws=new Date(now); ws.setDate(ws.getDate()-i*7); const we=new Date(ws); we.setDate(we.getDate()+7);
+      out.push({label:`${MON[ws.getMonth()]} ${ws.getDate()}`, value:state.workouts.filter(w=>{const t=new Date(w.date);return t>=ws&&t<we;}).length}); } return out; }
+  const thisWeekCount=()=>{ const ws=weekStart(new Date()); return state.workouts.filter(w=>new Date(w.date)>=ws).length; };
+  const thisMonthCount=()=>{ const n=new Date(); return state.workouts.filter(w=>{const t=new Date(w.date);return t.getMonth()===n.getMonth()&&t.getFullYear()===n.getFullYear();}).length; };
+  const totalHours=()=> state.workouts.reduce((a,w)=>a+(w.durationSec||0),0)/3600;
+  const avgDurationMin=()=>{ const ds=state.workouts.map(w=>w.durationSec).filter(x=>x>0); return ds.length? ds.reduce((a,b)=>a+b,0)/ds.length/60:0; };
+
+  // ---------- HOME ----------
+  function renderHome(){
+    const streak=currentStreak(), tw=thisWeekCount(), recent=state.workouts.slice(0,6);
+    const hr=new Date().getHours(); const greet= hr<12?'Good morning':hr<18?'Good afternoon':'Good evening';
+    const hp=state.prefs.homePhoto;
+    const heroStyle = hp ? `style="background-image:linear-gradient(rgba(0,0,0,.05),rgba(6,10,15,.4)),url('${hp}')"` : '';
+    view().innerHTML=`
+      <div class="hero ${hp?'has-photo':''}" ${heroStyle}>
+        <button class="hero-cam" onclick="App.pickHomePhoto()" title="Home photo">&#128247;</button>
+        <div class="hero-overlay">
+          <div class="brandline">Douglas &amp; Talita Haggist&rsquo;s X3</div>
+          <div class="muted" style="font-size:13px">${greet}</div>
+          <h1>Ready to train?</h1>
+          <div class="row"><button class="btn" onclick="App.startSession()">&#9889; Start Workout</button>
+            <button class="btn ghost" onclick="App.quickLog()">+ Quick Log</button></div>
+        </div>
+      </div>
+      <div class="grid three">
+        <div class="stat"><div class="n">${streak}</div><div class="l">Day Streak</div></div>
+        <div class="stat"><div class="n">${tw}</div><div class="l">This Week</div></div>
+        <div class="stat"><div class="n">${state.workouts.length}</div><div class="l">Total</div></div>
+      </div>
+      <div class="card"><h2>Activity</h2>${Charts.heat(byDateMap(),{weeks:26})}</div>
+      <div class="card">
+        <div class="row"><h2 style="margin:0">Recent Workouts</h2><span class="link right" onclick="App.go('workouts')">See all</span></div>
+        <div class="list" style="margin-top:10px">${recent.length? recent.map(workoutItem).join('') : emptyState('No workouts yet','Tap Start Workout, or import your history from the menu.')}</div>
+      </div>`;
+  }
+  const emptyState=(t,s)=>`<div class="empty"><div class="big">&#9889;</div><div>${esc(t)}</div><div class="muted" style="font-size:13px;margin-top:6px">${esc(s||'')}</div></div>`;
+  function workoutItem(w){ const ex=(w.exercises&&w.exercises.length)?`${w.exercises.length} exercise${w.exercises.length>1?'s':''}`:'Timed session';
+    return `<div class="item" onclick="App.viewWorkout('${w.id}')"><div class="grow"><div class="t">${fmtDate(w.date)}</div>
+      <div class="s">${ex}${w.notes?' · '+esc(String(w.notes).slice(0,40)):''}</div></div><div class="badge gray">${fmtDur(w.durationSec)}</div></div>`; }
+
+  // ---------- WORKOUTS ----------
+  function renderWorkouts(){
+    const groups={}; state.workouts.forEach(w=>{ const x=d(w.date); const k=`${MON[x.getMonth()]} ${x.getFullYear()}`; (groups[k]=groups[k]||[]).push(w); });
+    view().innerHTML=`
+      <div class="row" style="margin-bottom:6px"><h1 style="font-size:22px">Workouts</h1>
+        <button class="btn sm right" onclick="App.startSession()">+ New</button></div>
+      <div class="muted" style="font-size:13px;margin-bottom:8px">${state.workouts.length} sessions</div>
+      ${Object.entries(groups).map(([k,ws])=>`<div class="card"><h2>${k} · ${ws.length}</h2>
+        <div class="list" style="margin-top:8px">${ws.map(workoutItem).join('')}</div></div>`).join('') || emptyState('No workouts yet','Start one or import your history.')}`;
+  }
+  function viewWorkout(id){ const w=state.workouts.find(x=>x.id===id); if(!w)return;
+    const exHtml=(w.exercises&&w.exercises.length)? w.exercises.map(ex=>{
+      const sets=(ex.sets||[]).map((s,i)=>`<div class="s">Set ${i+1}: ${s.reps??'–'} reps${s.partialReps?` +${s.partialReps}p`:''}${s.bandId?` · ${esc((bandById(s.bandId)||{}).name||'')}`:''}${s.resistanceKg?` · ${round(toDisp(s.resistanceKg))}${uName()}`:''}</div>`).join('');
+      return `<div class="item" style="display:block"><div class="t">${esc(movName(ex.movementId))}</div>${sets||'<div class="s muted">No sets</div>'}</div>`; }).join('')
+      : '<div class="muted">Timed session — no exercises logged.</div>';
+    openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">${fmtDate(w.date)}</h2>
+      <div class="muted" style="margin-bottom:10px">${new Date(w.date).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} · ${fmtDur(w.durationSec)}</div>
+      <div class="list">${exHtml}</div>${w.notes?`<div class="card" style="margin-top:10px"><div class="s muted">Notes</div>${esc(w.notes)}</div>`:''}
+      <div class="row" style="margin-top:16px"><button class="btn ghost" onclick="App.editWorkout('${w.id}')">Edit</button>
+        <button class="btn red right" onclick="App.deleteWorkout('${w.id}')">Delete</button></div>`);
+  }
+  function editWorkout(id){ const w=state.workouts.find(x=>x.id===id); if(!w)return;
+    openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Edit workout</h2>
+      <label class="field"><span class="lab">Date & time</span><input type="datetime-local" id="ew_date" value="${toLocalInput(w.date)}"></label>
+      <label class="field"><span class="lab">Duration (minutes)</span><input type="number" id="ew_dur" value="${round((w.durationSec||0)/60,1)}"></label>
+      <label class="field"><span class="lab">Notes</span><textarea id="ew_notes">${esc(w.notes||'')}</textarea></label>
+      <button class="btn block" id="ew_save" onclick="App.saveWorkoutEdit('${w.id}')">Save</button>`); }
+  async function saveWorkoutEdit(id){ const w=state.workouts.find(x=>x.id===id); if(!w)return;
+    const upd={ ...w, date:new Date($('#ew_date').value||w.date).toISOString(), durationSec:Math.round(parseFloat($('#ew_dur').value||0)*60), notes:$('#ew_notes').value.trim()||null };
+    await busy('#ew_save', async()=>{ const saved=await Supa.put('workouts',upd); replaceWorkout(saved); });
+    closeSheet(); render(); toast('Saved'); }
+  async function deleteWorkout(id){ if(!confirm('Delete this workout?'))return;
+    await Supa.del('workouts',id); state.workouts=state.workouts.filter(w=>w.id!==id); closeSheet(); render(); toast('Deleted'); }
+  function replaceWorkout(w){ const i=state.workouts.findIndex(x=>x.id===w.id); if(i>=0) state.workouts[i]=w; else state.workouts.unshift(w);
+    state.workouts.sort((a,b)=> new Date(b.date)-new Date(a.date)); }
+
+  // ---------- LOG / SESSION ----------
+  function renderLog(){ if(state.session) return renderActive();
+    view().innerHTML=`
+      <h1 style="font-size:22px">Log a Workout</h1>
+      <div class="card"><h2>Start a session</h2>
+        <p class="muted" style="font-size:13px">Live timer. Add exercises & sets as you go, or just track the duration.</p>
+        <button class="btn block" onclick="App.startSession()">&#9889; Start Blank Session</button>
+        ${state.templates.length?`<div class="pill-row">${state.templates.map(t=>`<span class="chip" onclick="App.startSession('${t.id}')">${esc(t.name)}</span>`).join('')}</div>`:''}</div>
+      <div class="card"><h2>Quick entry</h2><p class="muted" style="font-size:13px">Already trained? Log it after the fact.</p>
+        <button class="btn ghost block" onclick="App.quickLog()">+ Add Past Workout</button></div>`;
+  }
+  function renderActive(){ const s=state.session;
+    const exs=(s.exercises||[]).map((ex,ei)=>{
+      const rows=(ex.sets||[]).map((st,si)=>`<div class="setrow"><span class="idx">${si+1}</span>
+        <input type="number" placeholder="reps" value="${st.reps??''}" oninput="App.setField(${ei},${si},'reps',this.value)">
+        <select onchange="App.setField(${ei},${si},'bandId',this.value)"><option value="">band…</option>
+          ${state.bands.map(b=>`<option value="${b.id}" ${st.bandId===b.id?'selected':''}>${esc(b.name)}</option>`).join('')}</select>
+        <button class="iconbtn" style="width:34px;height:34px;font-size:15px" onclick="App.delSet(${ei},${si})">&times;</button></div>`).join('');
+      return `<div class="card"><div class="row"><h2 style="margin:0;color:var(--txt);text-transform:none;font-size:16px">${esc(movName(ex.movementId))}</h2>
+        <button class="iconbtn right" style="width:32px;height:32px;font-size:14px" onclick="App.delExercise(${ei})">&times;</button></div>
+        ${rows||''}<button class="btn ghost sm" style="margin-top:8px" onclick="App.addSet(${ei})">+ Set</button></div>`; }).join('');
+    view().innerHTML=`
+      <div class="card" style="text-align:center;background:linear-gradient(135deg,#14212b,#101722)">
+        <div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:1px">Session in progress</div>
+        <div class="timer pulse" id="liveTimer">${fmtClock((Date.now()-s.startedAt)/1000)}</div>
+        <div class="row" style="justify-content:center;margin-top:10px">
+          <button class="btn red" id="finishBtn" onclick="App.finishSession()">Finish</button>
+          <button class="btn ghost" onclick="App.cancelSession()">Cancel</button></div></div>
+      ${exs}
+      <button class="btn ghost block" onclick="App.pickExercise()">+ Add Exercise</button>
+      <label class="field" style="margin-top:14px"><span class="lab">Session notes</span>
+        <textarea id="sess_notes" oninput="App.sessNotes(this.value)">${esc(s.notes||'')}</textarea></label>`;
+  }
+  function tick(){ const el=$('#liveTimer'); if(el&&state.session) el.textContent=fmtClock((Date.now()-state.session.startedAt)/1000); }
+  function startSession(templateId){ let exercises=[];
+    if(templateId){ const t=state.templates.find(x=>x.id===templateId); if(t) exercises=(t.items||[]).slice().sort((a,b)=>(a.rank||0)-(b.rank||0)).map(it=>({movementId:it.movementId,sets:[{reps:null,bandId:''}]})); }
+    state.session={ id:uuid(), startedAt:Date.now(), exercises, notes:'' }; saveSession(state.session); go('log'); }
+  function sessNotes(v){ state.session.notes=v; saveSession(state.session); }
+  function pickExercise(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Add exercise</h2>
+    <div class="list">${state.movements.map(m=>`<div class="item" onclick="App.addExercise('${m.id}')"><div class="grow"><div class="t">${esc(m.name)}</div><div class="s">${m.bandDoubled?'Doubled band':(m.resistanceType||'band')}</div></div><span class="badge">Add</span></div>`).join('')||emptyState('No movements','Add one from the menu → Manage.')}</div>
+    <button class="btn ghost block" style="margin-top:10px" onclick="App.newMovementInline()">+ New movement</button>`); }
+  function addExercise(mid){ state.session.exercises.push({movementId:mid,sets:[{reps:null,bandId:''}]}); saveSession(state.session); closeSheet(); renderActive(); }
+  function delExercise(ei){ state.session.exercises.splice(ei,1); saveSession(state.session); renderActive(); }
+  function addSet(ei){ const ex=state.session.exercises[ei]; const last=ex.sets[ex.sets.length-1]||{}; ex.sets.push({reps:last.reps??null,bandId:last.bandId||''}); saveSession(state.session); renderActive(); }
+  function delSet(ei,si){ state.session.exercises[ei].sets.splice(si,1); saveSession(state.session); renderActive(); }
+  function setField(ei,si,f,v){ const st=state.session.exercises[ei].sets[si];
+    if(f==='reps') st.reps=v===''?null:parseInt(v,10);
+    else if(f==='bandId'){ st.bandId=v; const b=bandById(v); if(b) st.resistanceKg=(b.minKg+b.maxKg)/2; } saveSession(state.session); }
+  async function finishSession(){ const s=state.session; const dur=Math.round((Date.now()-s.startedAt)/1000);
+    const exercises=(s.exercises||[]).filter(ex=>ex.sets&&ex.sets.length);
+    const w={ id:s.id, date:new Date(s.startedAt).toISOString(), durationSec:dur, notes:s.notes&&s.notes.trim()?s.notes.trim():null, autoSaved:false, restTimers:[], exercises };
+    await busy('#finishBtn', async()=>{ const saved=await Supa.put('workouts',w); replaceWorkout(saved); });
+    state.session=null; saveSession(null); go('home'); toast(`Workout saved · ${fmtDur(dur)}`); }
+  function cancelSession(){ if(!confirm('Discard this session?'))return; state.session=null; saveSession(null); go('log'); }
+  function quickLog(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Add past workout</h2>
+    <label class="field"><span class="lab">Date & time</span><input type="datetime-local" id="q_date" value="${toLocalInput(new Date())}"></label>
+    <label class="field"><span class="lab">Duration (minutes)</span><input type="number" id="q_dur" value="45"></label>
+    <label class="field"><span class="lab">Notes (optional)</span><textarea id="q_notes"></textarea></label>
+    <button class="btn block" id="q_save" onclick="App.saveQuick()">Save workout</button>`); }
+  async function saveQuick(){ const dt=$('#q_date').value; const min=parseFloat($('#q_dur').value||0);
+    if(!dt){ toast('Pick a date'); return; }
+    const w={ id:uuid(), date:new Date(dt).toISOString(), durationSec:Math.round(min*60), notes:$('#q_notes').value.trim()||null, autoSaved:false, restTimers:[], exercises:[] };
+    await busy('#q_save', async()=>{ const saved=await Supa.put('workouts',w); replaceWorkout(saved); });
+    closeSheet(); render(); toast('Workout added'); }
+
+  // ---------- PROGRESS ----------
+  let progMovement=null;
+  function renderProgress(){
+    const movesWithData=state.movements.filter(m=> state.workouts.some(w=>(w.exercises||[]).some(e=>e.movementId===m.id&&(e.sets||[]).some(s=>s.resistanceKg))));
+    view().innerHTML=`
+      <h1 style="font-size:22px">Progress</h1>
+      <div class="grid two">
+        <div class="stat"><div class="n">${state.workouts.length}</div><div class="l">Workouts</div></div>
+        <div class="stat"><div class="n">${round(totalHours())}<small> h</small></div><div class="l">Total Time</div></div>
+        <div class="stat"><div class="n">${thisMonthCount()}</div><div class="l">This Month</div></div>
+        <div class="stat"><div class="n">${round(avgDurationMin())}<small> min</small></div><div class="l">Avg Session</div></div>
+      </div>
+      <div class="card"><h2>Workouts / Week</h2>${Charts.bar(weeklyCounts(14),{unit:''})}</div>
+      <div class="card"><h2>Session Duration Trend</h2>${Charts.line(durationTrend(20),{unit:' min'})}</div>
+      <div class="card"><h2>Consistency</h2>${Charts.heat(byDateMap(),{weeks:26})}</div>
+      <div class="card"><h2>Strength Progression</h2>
+        ${movesWithData.length?`<div class="chips" style="margin:8px 0">${movesWithData.map(m=>`<span class="chip ${(progMovement||movesWithData[0].id)===m.id?'active':''}" onclick="App.setProgMovement('${m.id}')">${esc(m.name)}</span>`).join('')}</div>
+          ${Charts.line(movementProgression(progMovement||movesWithData[0].id),{unit:' '+uName()})}`
+          :`<p class="muted" style="font-size:13px">Log exercises with bands during a session to see per-movement strength trends here.</p>`}</div>`;
+  }
+  function setProgMovement(id){ progMovement=id; renderProgress(); }
+  const durationTrend=n=> state.workouts.slice(0,n).reverse().map(w=>({label:fmtShort(w.date),value:round((w.durationSec||0)/60)}));
+  function movementProgression(mid){ const pts=[]; state.workouts.slice().reverse().forEach(w=>{ (w.exercises||[]).forEach(e=>{ if(e.movementId===mid){
+    const maxKg=Math.max(0,...(e.sets||[]).map(s=>s.resistanceKg||0)); if(maxKg>0) pts.push({label:fmtShort(w.date),value:round(toDisp(maxKg))}); }});}); return pts; }
+
+  // ---------- PLAN ----------
+  function renderPlan(){ const p=plan();
+    view().innerHTML=`
+      <h1 style="font-size:22px">Plan</h1>
+      <div class="card"><h2>Training Days</h2>
+        <div class="pill-row">${DAY.map((dn,i)=>`<span class="chip ${p.days.includes(i)?'active':''}" onclick="App.togglePlanDay(${i})">${dn}</span>`).join('')}</div></div>
+      <div class="card"><h2>Assign Templates</h2>
+        ${p.days.length? p.days.map(i=>`<label class="field"><span class="lab">${DAY[i]}</span>
+          <select onchange="App.assignTemplate(${i},this.value)"><option value="">— rest / freestyle —</option>
+          ${state.templates.map(t=>`<option value="${t.id}" ${p.templateByDay[i]===t.id?'selected':''}>${esc(t.name)}</option>`).join('')}</select></label>`).join('')
+          :'<p class="muted" style="font-size:13px">Pick training days above.</p>'}</div>
+      <div class="card"><h2>Reminders</h2>
+        <p class="muted" style="font-size:13px">A local notification on training days (when installed to your home screen).</p>
+        <label class="field"><span class="lab">Reminder time</span><input type="time" id="rem_time" value="${p.reminder||''}"></label>
+        <div class="row"><button class="btn" onclick="App.saveReminder()">Enable reminder</button>
+          <button class="btn ghost" onclick="App.testReminder()">Test</button></div></div>
+      <div class="card"><h2>Next Up</h2>${nextUp(p)}</div>`;
+  }
+  function nextUp(p){ if(!p.days.length) return '<p class="muted">No training days set.</p>';
+    const today=new Date().getDay(); let out=[];
+    for(let k=0;k<7;k++){ const dd=(today+k)%7; if(p.days.includes(dd)){ const t=p.templateByDay[dd];
+      out.push(`<div class="item"><div class="grow"><div class="t">${k===0?'Today':k===1?'Tomorrow':DAY[dd]}</div><div class="s">${t?esc((state.templates.find(x=>x.id===t)||{}).name||''):'Freestyle'}</div></div>${k===0?'<span class="badge">Now</span>':''}</div>`);
+      if(out.length>=4) break; } } return `<div class="list">${out.join('')}</div>`; }
+  function togglePlanDay(i){ const p=plan(); const idx=p.days.indexOf(i); if(idx>=0)p.days.splice(idx,1); else p.days.push(i); p.days.sort(); savePlan(p); renderPlan(); }
+  function assignTemplate(i,tid){ const p=plan(); p.templateByDay[i]=tid; savePlan(p); }
+  async function saveReminder(){ const t=$('#rem_time').value; const p=plan(); p.reminder=t||null; await savePlan(p);
+    if(t){ const perm=await Notification.requestPermission(); if(perm==='granted'){ scheduleReminders(); toast('Reminder enabled'); } else toast('Notifications blocked'); } else toast('Reminder cleared'); }
+  function testReminder(){ if(Notification.permission==='granted') new Notification("Haggist X3",{body:'Time to train 💪',icon:'icons/icon-192.png'});
+    else Notification.requestPermission().then(pm=>{ if(pm==='granted') new Notification("Haggist X3",{body:'Time to train 💪'}); }); }
+  let remTimer=null;
+  function scheduleReminders(){ if(remTimer) clearTimeout(remTimer); const p=plan(); if(!p.reminder)return;
+    const [h,m]=p.reminder.split(':').map(Number); const now=new Date(); const next=new Date(); next.setHours(h,m,0,0);
+    if(next<=now) next.setDate(next.getDate()+1);
+    remTimer=setTimeout(function fire(){ if(plan().days.includes(new Date().getDay())&&Notification.permission==='granted') new Notification("Haggist X3",{body:'Training day — time to move 💪',icon:'icons/icon-192.png'});
+      remTimer=setTimeout(fire,86400000); }, next-now); }
+
+  // ---------- MANAGE library ----------
+  function manage(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Manage library</h2>
+    <div class="chips" style="margin-bottom:10px"><span class="chip active" onclick="App.mgTab(this,'mov')">Movements</span>
+      <span class="chip" onclick="App.mgTab(this,'band')">Bands</span><span class="chip" onclick="App.mgTab(this,'tpl')">Templates</span></div>
+    <div id="mgBody"></div>`); mgRender('mov'); }
+  function mgTab(el,t){ el.parentNode.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); mgRender(t); }
+  function mgRender(t){ const b=$('#mgBody');
+    if(t==='mov') b.innerHTML=`<div class="list">${state.movements.map(m=>`<div class="item"><div class="grow"><div class="t">${esc(m.name)}</div><div class="s">${m.bandDoubled?'Doubled ':''}${m.trackReps?'reps ':''}${m.trackResistance?'· resistance':''}</div></div><span class="link danger" onclick="App.delItem('movements','${m.id}')">Delete</span></div>`).join('')||emptyState('None','')}</div><button class="btn ghost block" style="margin-top:10px" onclick="App.newMovementInline()">+ New movement</button>`;
+    if(t==='band') b.innerHTML=`<div class="list">${state.bands.map(bd=>`<div class="item"><span class="dot" style="background:${esc(bd.color||'#888')}"></span><div class="grow"><div class="t">${esc(bd.name)}</div><div class="s">${round(toDisp(bd.minKg))}–${round(toDisp(bd.maxKg))} ${uName()} · ${esc(bd.brand||'')}</div></div><span class="link danger" onclick="App.delItem('bands','${bd.id}')">Delete</span></div>`).join('')||emptyState('None','')}</div><button class="btn ghost block" style="margin-top:10px" onclick="App.newBandInline()">+ New band</button>`;
+    if(t==='tpl') b.innerHTML=`<div class="list">${state.templates.map(tp=>`<div class="item"><div class="grow"><div class="t">${esc(tp.name)}</div><div class="s">${(tp.items||[]).length} movements</div></div><span class="link danger" onclick="App.delItem('templates','${tp.id}')">Delete</span></div>`).join('')||emptyState('None','')}</div><button class="btn ghost block" style="margin-top:10px" onclick="App.newTemplateInline()">+ New template</button>`; }
+  function newMovementInline(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">New movement</h2>
+    <label class="field"><span class="lab">Name</span><input id="nm_name" placeholder="e.g. Bicep Curl"></label>
+    <label class="field"><span class="lab">Options</span><div class="row wrap"><label class="inline"><input type="checkbox" id="nm_doubled" style="width:auto"> Doubled band</label>
+      <label class="inline"><input type="checkbox" id="nm_res" checked style="width:auto"> Track resistance</label></div></label>
+    <button class="btn block" id="nm_save" onclick="App.saveMovement()">Add movement</button>`); }
+  async function saveMovement(){ const name=$('#nm_name').value.trim(); if(!name){toast('Name?');return;}
+    const m={ id:uuid(), name, resistanceType:'band', bandDoubled:$('#nm_doubled').checked, trackReps:true, trackPartialReps:true, trackResistance:$('#nm_res').checked, trackDuration:false, description:null, order:state.movements.length };
+    await busy('#nm_save', async()=>{ const saved=await Supa.put('movements',m); state.movements.push(saved); }); closeSheet(); toast('Movement added'); }
+  function newBandInline(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">New band</h2>
+    <label class="field"><span class="lab">Name</span><input id="nb_name" placeholder="e.g. Green"></label>
+    <div class="grid two"><label class="field"><span class="lab">Min (${uName()})</span><input type="number" id="nb_min" value="10"></label>
+      <label class="field"><span class="lab">Max (${uName()})</span><input type="number" id="nb_max" value="30"></label></div>
+    <label class="field"><span class="lab">Color</span><input type="color" id="nb_color" value="#2dd4bf" style="height:44px"></label>
+    <button class="btn block" id="nb_save" onclick="App.saveBand()">Add band</button>`); }
+  async function saveBand(){ const name=$('#nb_name').value.trim(); if(!name){toast('Name?');return;}
+    const f=state.units==='kg'?1:1/KG2LB;
+    const b={ id:uuid(), name, brand:'Custom', color:$('#nb_color').value, description:null, minKg:parseFloat($('#nb_min').value||0)*f, maxKg:parseFloat($('#nb_max').value||0)*f, key:'band:custom:'+name.toLowerCase().replace(/\s+/g,'-'), order:state.bands.length };
+    await busy('#nb_save', async()=>{ const saved=await Supa.put('bands',b); state.bands.push(saved); }); closeSheet(); toast('Band added'); }
+  function newTemplateInline(){ openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">New template</h2>
+    <label class="field"><span class="lab">Name</span><input id="nt_name" placeholder="e.g. Push Day"></label>
+    <span class="lab">Movements (tap to add in order)</span>
+    <div class="pill-row" id="nt_pick">${state.movements.map(m=>`<span class="chip" data-id="${m.id}" onclick="App.tplToggle(this)">${esc(m.name)}</span>`).join('')}</div>
+    <button class="btn block" style="margin-top:12px" id="nt_save" onclick="App.saveTemplate()">Create template</button>`); App._tplSel=[]; }
+  function tplToggle(el){ const id=el.dataset.id; const i=App._tplSel.indexOf(id);
+    if(i>=0){App._tplSel.splice(i,1);el.classList.remove('active');el.textContent=el.textContent.replace(/^\d+\.\s/,'');}
+    else{App._tplSel.push(id);el.classList.add('active');el.textContent=App._tplSel.length+'. '+el.textContent;} }
+  async function saveTemplate(){ const name=$('#nt_name').value.trim(); if(!name||!App._tplSel.length){toast('Name + movements');return;}
+    const t={ id:uuid(), name, items:App._tplSel.map((id,i)=>({movementId:id,rank:i+1,label:null,duration:null})) };
+    await busy('#nt_save', async()=>{ const saved=await Supa.put('templates',t); state.templates.push(saved); }); closeSheet(); toast('Template created'); }
+  async function delItem(store,id){ if(!confirm('Delete?'))return; await Supa.del(store,id);
+    state[store]=state[store].filter(x=>x.id!==id); const active=$('#mgBody'); if(active) mgRender(store==='movements'?'mov':store==='bands'?'band':'tpl'); toast('Deleted'); }
+
+  // ---------- ACCOUNT / DATA menu ----------
+  async function dataMenu(){
+    openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Account & Data</h2>
+      <p class="muted" style="font-size:13px;margin-top:-4px">${esc(state.user?.email||'')}</p>
+      <div class="grid two" style="margin:10px 0">
+        <div class="stat"><div class="n">${state.workouts.length}</div><div class="l">Workouts</div></div>
+        <div class="stat"><div class="n">${state.movements.length}/${state.bands.length}</div><div class="l">Moves / Bands</div></div></div>
+      <label class="field"><span class="lab">Units</span><select id="set_units" onchange="App.setUnits(this.value)">
+        <option value="lb" ${state.units==='lb'?'selected':''}>Pounds (lb)</option>
+        <option value="kg" ${state.units==='kg'?'selected':''}>Kilograms (kg)</option></select></label>
+      <button class="btn ghost block" onclick="App.manage()">Manage movements / bands / templates</button>
+      <hr>
+      <h2 style="color:var(--txt);text-transform:none;font-size:15px">Import / Backup</h2>
+      <div class="row" style="margin:8px 0"><label class="btn" style="cursor:pointer">Import V3ME file<input type="file" accept="application/json" style="display:none" id="impFile"></label>
+        <button class="btn ghost" onclick="App.exportData()">Export</button></div>
+      <p class="muted" style="font-size:12px">Import your <b>v3me-local-export.json</b> (or any V3ME backup) to load your history into this account. It then syncs to all your devices.</p>
+      <hr>
+      <button class="btn ghost block" onclick="App.signOut()">Sign out</button>
+      <button class="btn red block" style="margin-top:8px" onclick="App.eraseData()">Erase my data</button>
+      <p class="muted" style="font-size:11px;text-align:center;margin-top:14px">V3ME · private per-user sync</p>`);
+    $('#impFile').addEventListener('change', importFile);
+  }
+  async function setUnits(u){ state.units=u; state.prefs.units=u; try{ await Supa.setPref('units',u);}catch(e){} toast('Units: '+u); if(state.route==='progress'||state.route==='home') render(); }
+  function exportData(){ const bundle=Supa.exportBundle(state);
+    const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`v3me-backup-${dayKey(new Date())}.json`; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),3000); toast('Backup exported'); }
+  async function importFile(e){ const f=e.target.files[0]; if(!f)return;
+    let bundle; try{ bundle=JSON.parse(await f.text()); }catch(err){ toast('Not valid JSON'); return; }
+    if(!bundle.workouts&&!bundle.bands){ toast('Not a V3ME backup'); return; }
+    const replace=confirm('Replace your current data with this file?\n\nOK = Replace · Cancel = Merge');
+    openSheet(`<div class="empty" style="padding:40px 10px"><span class="spin"></span><div class="muted" style="margin-top:12px">Importing ${(bundle.workouts||[]).length} workouts…</div></div>`);
+    try{ const counts=await Supa.importBundle(bundle,{replace}); await refresh(); closeSheet(); render();
+      toast(`Imported ${Object.values(counts).reduce((a,b)=>a+b,0)} records`); }
+    catch(err){ closeSheet(); toast('Import failed: '+(err.message||err)); }
+  }
+  async function signOut(){ closeSheet(); saveSession(null); await Supa.signOut(); /* onAuth -> showAuth */ }
+  async function eraseData(){ if(!confirm('Erase ALL your workouts, bands, movements and templates? This cannot be undone.'))return;
+    try{ await Supa.importBundle({bands:[],movements:[],templates:[],workouts:[]},{replace:true}); await refresh(); closeSheet(); render(); toast('Your data was erased'); }
+    catch(e){ toast('Error: '+(e.message||e)); } }
+
+  // ---------- HOME PHOTO (synced via prefs) ----------
+  function pickHomePhoto(){
+    openSheet(`<h2 style="text-transform:none;color:var(--txt);font-size:18px">Home photo</h2>
+      <p class="muted" style="font-size:13px">Add a personal photo to your home screen. It syncs to your other devices.</p>
+      <label class="btn block" style="cursor:pointer">Choose photo<input type="file" accept="image/*" id="hp_input" style="display:none"></label>
+      ${state.prefs.homePhoto?`<button class="btn ghost block" style="margin-top:8px" onclick="App.removeHomePhoto()">Remove photo</button>`:''}`);
+    $('#hp_input').addEventListener('change', onHomePhoto);
+  }
+  async function onHomePhoto(e){ const f=e.target.files[0]; if(!f) return;
+    try{ const dataUrl=await downscaleImage(f,1200,0.78); state.prefs.homePhoto=dataUrl; closeSheet(); render(); toast('Saving photo…');
+      await Supa.setPref('homePhoto',dataUrl); toast('Home photo updated'); }
+    catch(err){ toast('Could not save that image'); } }
+  async function removeHomePhoto(){ delete state.prefs.homePhoto; closeSheet(); render(); try{ await Supa.setPref('homePhoto',null);}catch(e){} toast('Photo removed'); }
+  function downscaleImage(file,maxW,q){ return new Promise((res,rej)=>{ const img=new Image(); const url=URL.createObjectURL(file);
+    img.onload=()=>{ const scale=Math.min(1,maxW/img.width); const w=Math.round(img.width*scale),h=Math.round(img.height*scale);
+      const c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg',q)); };
+    img.onerror=()=>{ URL.revokeObjectURL(url); rej(new Error('bad image')); }; img.src=url; }); }
+
+  // ---------- util: busy button ----------
+  async function busy(sel, fn){ const b=$(sel); const old=b?b.innerHTML:''; if(b){ b.disabled=true; b.innerHTML='<span class="spin"></span>'; }
+    try{ await fn(); } catch(e){ toast('Error: '+(e.message||e)); throw e; } finally{ if(b){ b.disabled=false; b.innerHTML=old; } } }
+
+  return { boot, showSetup:()=>showSetup(), saveSetup, go, authMode, authSubmit, forgot, startSession, quickLog, saveQuick, viewWorkout, editWorkout, saveWorkoutEdit, deleteWorkout,
+    pickExercise, addExercise, delExercise, addSet, delSet, setField, finishSession, cancelSession, sessNotes,
+    setProgMovement, togglePlanDay, assignTemplate, saveReminder, testReminder, manage, mgTab,
+    newMovementInline, saveMovement, newBandInline, saveBand, newTemplateInline, tplToggle, saveTemplate, delItem,
+    dataMenu, setUnits, exportData, signOut, eraseData, pickHomePhoto, removeHomePhoto, _tplSel:[] };
+})();
+window.addEventListener('DOMContentLoaded', ()=>App.boot());
+
+</script>
+</body>
+</html>
